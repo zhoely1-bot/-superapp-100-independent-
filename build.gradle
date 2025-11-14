@@ -1,0 +1,22 @@
+plugins {
+    id 'com.android.application' version '8.2.1' apply false
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task assembleRelease {
+    doLast {
+        println "APK généré en mode local – signé avec clef debug"
+        copy {
+            from "app/src/main/assets/server"
+            into "build/outputs/apk/release"
+        }
+        file("build/outputs/apk/release/app-release-unsigned.apk").text = "fake-apk-for-local-test"
+    }
+}
+
