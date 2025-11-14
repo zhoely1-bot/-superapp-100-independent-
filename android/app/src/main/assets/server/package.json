@@ -1,0 +1,1 @@
+{"name":"superapp-server","version":"1.0.0","main":"index.js","scripts":{"start":"node index.js"},"license":"MIT","dependencies":{"express":"^5.1.0","ws":"^8.18.3"}}
